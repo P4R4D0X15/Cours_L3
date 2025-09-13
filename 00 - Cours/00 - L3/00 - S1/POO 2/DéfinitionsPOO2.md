@@ -213,3 +213,14 @@ La déclaration de plusieurs méthodes ayant même nom mais de signature différ
 ## Comment l'invocation de méthode fonctionne dans un cas de surcharge
 Le compilateur va chercher le plus petit type (Dans le sens d'une relation de sous-typage) tel que W est un sous-type de X et que la signature de la méthode  m existe dans le type statique de la variable qui appelle une méthode surchargé
 
+## Qu'est ce que l'Ambiguïté en Java ?
+$min \{(X_1, ... ,X_n)\}$ n'existe pas toujours (voir l'algorithme sur l'invocation en présence de surcharge Diapo 47 cm6)
+
+## Qu'est ce qu'un paquetage Java? Quels sont ses avantages ?
+C'est une unité de regroupement de types et de sous-paquetages en un tout logiquement cohérent
+* Meilleure gestion du code
+* Fournit un espace de nommage
+* Fournit un niveau supplémentaire de masquage de l'information
+* **Un paquetage est toujours accessible**
+
+## 
