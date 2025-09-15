@@ -110,4 +110,3 @@ Processus :
 ## Sous Linux, quel est le type de politiques d'ordonnancement utiliser ?
 Les processus sont organiser par niveau de priorités (Statiques et dynamiques)
 
-test

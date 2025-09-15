@@ -223,4 +223,66 @@ C'est une unité de regroupement de types et de sous-paquetages en un tout logiq
 * Fournit un niveau supplémentaire de masquage de l'information
 * **Un paquetage est toujours accessible**
 
-## 
+## Quels sont les différentes accessibilités pour un type ($B \in p$)?
+* public -> accessible dans tout type
+* ```<rien>``` -> accessible seulement dans le même paquetage
+
+## Quels sont les différentes accessibilités pour un caractéristique $c \in B (B \in p)$?
+* public -> accessible seulement dans les cas où $B$ est accessible
+* protected -> accessible dans le même paquetage **et** dans les sous-types de $B$ **et** "**qui sont responsable de l'implémentation de l'objet cible de l'appel**" (this / super / tq TS(x) sous-type de T (T <: $B$))
+*  ```<rien>``` -> accessible seulement dans le même paquetage
+* private -> accessible que dans $B$
+
+## Qu'est ce qu'un Flux ?
+Objet transportant des données séquentiellement et en quantité indéterminée, et qui permet une communication standardisée entre le programme et son environnement 
+
+## Quels sont les 3 axes de classifications des flux ?
+1. Selon le mode d'accès aux données (lecture / écriture)
+2. Selon le type des données transportées (textuelles/ binaires)
+3. Selon le mode opératoire (primaire / traitement)
+
+## Qu'est ce que l'encapsulation de données ?
+Une technique dans laquelle des opérations sémantiquement reliées qui sont regroupées au sein d'un même élément logiciel, avec les structures de données utilisées pour leur implémentation
+
+## Qu'est ce que la Rétention d'information ?
+Possibilité de masquer aux clients d'un élément logiciel toutes les parties de son code qui sont sans intérêt pour les clients, à l'aide d'un mécanisme d'accès sélectif défini au niveau du langage
+
+## Qu'est ce que le principe d'encapsulation ?
+Seul l'objet lui-même à accès à ses propres informations
+
+## Qu'est ce qu'un module ?
+Élément logiciel résultant de l'abstraction d'un concept, réalisé en suivant le principe d'encapsulation
+
+## Qu'est ce qu'un TDA (Type de données Abstrait) ?
+* Ensemble d'éléments muni d'opérations
+* Défini par une spécification qui exprime la sémantique des opérations
+
+## Qu'est ce qu'une fonction partielle ?
+$E_{def} \subset E_{départ}$ (noté "-/->")
+
+## Qu'est ce qu'une fonction Totale ?
+$E_{def} = E_{départ}$ (noté "-->")
+
+## Qu'est ce qu'une requête ? Quels sont les deux types de requêtes ?
+Permet d'accéder à la description du TDA :
+* Requête de Base : Requête "indispensable" au bon fonctionnement du TDA
+* Requête Dérivée : Requête calculable à partir des requêtes de Base
+
+## Qu'est ce qu'un générateur ? Quels sont les deux types de générateurs ?
+Permet d'accéder au TDA :
+* Créateur : Accès au TDA à partir d'une valeur externe
+* Commande : Accès au TDA à partir d'un autre objet de ce même TDA
+
+## Qu'est ce que la programmation par contrat (B. Meyer) ?
+Une méthode de construction du logiciel qui conçoit les composants d'un système de telle façon qu'ils coopèrent sur la base de contrats définis de façon formelle
+
+## Qu'est ce qu'un contrat ?
+Une spécification de constructeur ou de méthode qui en définit les conditions de bonne utilisation ainsi que l'effet produit par son exécution
+
+## Qu'est ce qu'un Invariant de Type ?
+Une spécification à l'état observable de toutes les instances d'un même type lorsqu'elles sont en phase stable
+
+## Qu'est ce qu'une classe correcte ?
+Une classe qui doit :
+* respecter sa spécification, données par un TDA
+* être codée comme un module
