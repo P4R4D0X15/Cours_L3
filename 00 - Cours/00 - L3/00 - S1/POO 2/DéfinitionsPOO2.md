@@ -286,3 +286,39 @@ Une spécification à l'état observable de toutes les instances d'un même type
 Une classe qui doit :
 * respecter sa spécification, données par un TDA
 * être codée comme un module
+
+## Qu'est ce que la Méthode ```equals``` ?
+Réalise une d'équivalence sur les objets (Utilisée surtout pour les collections)
+
+## Quel est le Contrat de la Méthode ```equals``` ?
+```
+@pre : true
+@post : Équivalence + Consistante + Compatible avec null
+```
+
+## Qu'est ce que la Méthode ```HashCode``` ?
+Représente une fonction de dispersion sur les objets, utilisée dans les tables de hachages internes à certain types de collections
+
+## Quel est le Contrat de la Méthode ```HashCode``` ?
+```
+@pre : true
+@post : Consistante avec, et domination par equals
+```
+
+## Qu'est ce que la Règle de consistance avec ```equals``` ?
+Tant que les données utilisées par ```equals``` ne varient pas la valeur retournée par ```hashCode``` ne change pas
+
+## Qu'est ce que la Règle de domination par ```equals``` ?
+```x.equals(y) => x.hashCode() == y.hashCode()```
+
+## Qu'est ce que ```Clone``` ?
+Créer et retourne une copie d'un objet
+## Quel est le Contrat de la Méthode ```Clone``` ?
+```
+@pre : true
+@post : 
+	1. l'objet et son clone ne sont pas le même objet
+	2. l'objet et son clone sont equals
+	3. la classe de l'objet et celle de son clone sont identiques
+```
+
