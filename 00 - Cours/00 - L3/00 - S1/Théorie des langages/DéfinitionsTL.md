@@ -97,3 +97,12 @@ Un langage $L$ est reconnaissable s'il existe un AFN sur $\Sigma$ tel que $L=L(M
 
 ## Qu'est ce qu'un algorithme standard?
 Un AFM M est standard s'il possède un état initial **unique non ré-entrant**
+
+## Quel est le Lemme concernant les Langages L(M) et L(Std(M)) ?
+Soit M un AFN. On a L(M) = L(Std(M))
+
+## Q'est ce qu'un Etat Accessible ?
+Un Etat q pour lequel il existe un chemin partant d'un état initial allant à cet état q
+
+## Qu'est ce qu'un Etat Co-Accessible ?
+Un Etat q pour lequel il existe un chemin partant de q allant à un état final
