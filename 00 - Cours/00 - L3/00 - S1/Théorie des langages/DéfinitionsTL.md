@@ -106,3 +106,24 @@ Un Etat q pour lequel il existe un chemin partant d'un état initial allant à c
 
 ## Qu'est ce qu'un Etat Co-Accessible ?
 Un Etat q pour lequel il existe un chemin partant de q allant à un état final
+
+## Qu'est ce qu'un Automate Émondé ?
+Un Automate Émondé Emd(M) = ($\Sigma, \ A \cap C, I \cap C, F \cap A, \delta '$) où :
+* $A$ est l'ensemble des états accessible 
+* C est l'ensemble des états co-accessible
+* $\delta ' = \{(p, a, q) \in \delta | p, q \in A \cap C\}$
+
+## Que peut-on dire des Langages L(M) et L(Emd(M)) ?
+Ce sont les même. En effet le langage reconnu par l'automate M est le même que celui reconnu par Emd(M)
+
+## Qu'est ce qu'un Sous-automate ?
+Soient M' = ($\Sigma, Q', I', F', \delta '$) et M = ($\Sigma, Q, I, F, \delta$), 
+On dit que M' est un Sous-automate de M si $Q' \subset Q, F' \subset F, I' \subset I, \delta ' \subset \delta$
+
+## Qu'est ce que l'union de deux automates ?
+Soient M' = ($\Sigma, Q', I', F', \delta '$) et M = ($\Sigma, Q, I, F, \delta$), 
+M' $\cup$ M = ($\Sigma, Q' \cup Q, I' \cup I, F' \cup F, \delta ' \cup \delta$)
+
+## Quel est le Lemme sur le Langage de l'union de deux automates ?
+L($M_1 \cup M_2$) = L($M_1$) $\cup$ L($M_2$)
+
