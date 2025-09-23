@@ -322,3 +322,47 @@ Créer et retourne une copie d'un objet
 	3. la classe de l'objet et celle de son clone sont identiques
 ```
 
+## Qu'est ce que le Principe de Substitution de Liskov (PSL) ?
+Pour deux types S et T, si :
+* Dans tout programme P, on peut utiliser une valeur de S partout où une valeur de T est attendue, sans modifier le sémantique de P, alors S $\subset$ T (S est sous-type de Liskov de T)
+
+## Quels sont les Avantages de la généricité sur le polymorphisme de sous-typage ?
+1. Renforce le typage
+2. améliore la sûreté du typage
+3. améliore la lisibilité du code
+
+## Qu'est ce qu'un type paramétré ( = instance générique d'un type générique) ?
+L'un des éléments d'un type générique, obtenu en substituant à chaque variable de types références références disponibles
+
+## Qu'est ce qu'un type générique ? 
+Famille de types, basée sur une unique définition de type, paramétrée par une ou plusieurs variables (ou paramètres) de types
+
+## Qu'est ce que l'effacement de la généricité ?
+Le compilateur supprime de bytecode toute information relative à la généricité
+
+## Qu'est ce qu'un Type Brut ?
+* Équivaut au type de base d'un type générique
+* C'est le seul type présent dans le bytecode, où il remplace à la fois le type générique et tous ses types paramétrés
+
+## Quand est-ce que l'accès aux paramètres de types est impossible ?
+Dans le contexte statique d'un type générique
+
+## Comment se fait l'accès aux éléments de type statique d'un type générique ?
+Par le type Brut
+
+## Quelle est la règle de Compatibilité Verticale ?
+Soient $G<E>$  et $H<E>$ tels que $G<E>$  hérite de $H<E>$ alors $\forall$ A (type référence), $G<A>\ <:\ H<A>$ 
+
+## Quelle est la règle d'Incompatibilité Horizontale ?
+Soit $G<E>$ un type générique alors $\forall$ A,  $\forall$ B (types références), ~~G\<A> \<: G\<B>
+
+## Que peut-on dire du Transtypage vers un type paramétré ?
+L'instruction ```checkcast``` porte sur le type brut
+
+## Quand est-ce que le compilateur émet l'avertissement ```unchecked``` ?
+Quand on ne peut pas garantir que le paramètre de type est correct
+
+## Qu'est ce qu'une Méthode Pont ?
+Méthode synthétisée par le compilateur lorsqu'il se produit un changement de signature (à cause de l'effacement de la généricité)
+au cours de l'héritage d'une méthode 
+
