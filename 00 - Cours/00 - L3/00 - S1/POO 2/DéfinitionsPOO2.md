@@ -366,3 +366,28 @@ Quand on ne peut pas garantir que le paramètre de type est correct
 Méthode synthétisée par le compilateur lorsqu'il se produit un changement de signature (à cause de l'effacement de la généricité)
 au cours de l'héritage d'une méthode 
 
+## Qu'est ce qu'une Collection générique ?
+Type générique spécialisé dans le stockage d'objets-éléments (insertion, suppression, recherche et parcours), dont le type des éléments est représenté par un paramètre de type
+
+## Qu'est ce qu'une Méthode Optionnelle ?
+* Méthode introduite dans une interface
+* Non nécessairement supportée dans les classes qui implémentent :
+	* Elle peut respecter sa spécification 
+			OU
+	* Elle peut échouer en levant une ```UnsuportedOperationEsception```
+
+## Qu'est ce qu'un Itérateur ?
+Un objet étroitement lié à une collection donnée, qui permet d'en énumérer tous les éléments indépendamment de la structure interne de cette collection
+
+## Qu'est ce qu'un Itérable ?
+Un objet capable de fournir des itérateurs, et donc utilisable comme source d'une boucle ```for``` étendue
+
+## Sur quoi se basent une Recherche dans une collection ?
+* Une relation d'équivalence dans les structures non ordonnées
+* Une relation d'ordre dans les structures non ordonnées
+
+## Qu'est ce que l'Ordre naturel sur une classe C ?
+Une Relation d'ordre sur C, définie dans C, par implémentation de l'interface ```Comparable<C>```
+
+## Qu'est ce que l'Ordre (quelconque) sur une classe C ?
+Une Relation d'ordre sur C, définie dans C, par implémentation de l'interface ```Comparator<C>```
