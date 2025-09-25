@@ -1,5 +1,3 @@
-# POO2
-
 ## L'exécution d'un programme  
 Une société d'objets qui communiquent par envoi de messages
 
