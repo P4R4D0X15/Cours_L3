@@ -124,6 +124,23 @@ On dit que M' est un Sous-automate de M si $Q' \subset Q, F' \subset F, I' \subs
 Soient M' = ($\Sigma, Q', I', F', \delta '$) et M = ($\Sigma, Q, I, F, \delta$), 
 M' $\cup$ M = ($\Sigma, Q' \cup Q, I' \cup I, F' \cup F, \delta ' \cup \delta$)
 
-## Quel est le Lemme sur le Langage de l'union de deux automates ?
-L($M_1 \cup M_2$) = L($M_1$) $\cup$ L($M_2$)
+## Quelle est la Propriété sur le Langage de l'union de deux automates ?
+$L(M_1 \cap M_2) = L(M_1) \cap L(M_2)$
+
+## Quelle est la Propriété sur le Langage de l'intersection de deux automates ?
+$L(M_1 \cap M_2) = L(M_1) \cap L(M_2)$
+
+## Quelle est la Propriété sur le Langage de l'étoile d'un automate ?
+$L((M_1)^*) = (L(M_1))^*$
+
+## Quelle est la Propriété sur le Langage de la concaténation de deux automates ?
+$L(M_1 . M_2) = L(M_1) . L(M_2)$
+
+## Qu'est ce qu'un Automate Déterministe ?
+Un automate $M = (\Sigma, Q, I, F, \delta)$ est déterministe *ssi*
+* $|I| = 1$
+* $\forall q \in Q, \forall a \in \Sigma | \{q' | (q, a , q') \in \delta\} \leq 1
+
+## Qu'est ce qu'un État puits ?
+Un état r non terminal tel que :  $\forall a \in \Sigma \delta(r, a) = r$
 

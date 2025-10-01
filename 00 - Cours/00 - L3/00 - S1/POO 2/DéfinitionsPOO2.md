@@ -389,3 +389,10 @@ Une Relation d'ordre sur C, définie dans C, par implémentation de l'interface 
 
 ## Qu'est ce que l'Ordre (quelconque) sur une classe C ?
 Une Relation d'ordre sur C, définie dans C, par implémentation de l'interface ```Comparator<C>```
+
+## Qu'est ce qu'une Contrainte Générique ?
+Une Notation placée dans la déclaration d'un paramètre de type, restreignant les substitutions possibles
+
+## Qu'est ce qu'une Contrainte générique à bornes multiples ?
+```G < E extends [X &] I1, & ... & In >```
+
