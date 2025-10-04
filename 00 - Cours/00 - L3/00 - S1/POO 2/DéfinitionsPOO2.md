@@ -329,8 +329,9 @@ Pour deux types S et T, si :
 2. améliore la sûreté du typage
 3. améliore la lisibilité du code
 
-## Qu'est ce qu'un type paramétré ( = instance générique d'un type générique) ?
-L'un des éléments d'un type générique, obtenu en substituant à chaque variable de types références références disponibles
+## Qu'est ce qu'un type paramétré ?
+* L'un des éléments d'un type générique, obtenu en substituant à chaque variable de types références références disponibles
+*  instance générique d'un type générique
 
 ## Qu'est ce qu'un type générique ? 
 Famille de types, basée sur une unique définition de type, paramétrée par une ou plusieurs variables (ou paramètres) de types
@@ -396,3 +397,30 @@ Une Notation placée dans la déclaration d'un paramètre de type, restreignant 
 ## Qu'est ce qu'une Contrainte générique à bornes multiples ?
 ```G < E extends [X &] I1, & ... & In >```
 
+## Qu'est ce qu'un Joker de type ?
+Un Symbole utilisé dans une instanciation générique pour représenter le super-type commun à tous les types paramétrés d'un même type générique
+
+## Sous quelles conditions un type paramétré est instanciable ?
+* Son type de base est instanciable 
+		 ET
+* Ses paramètres effectifs sont tous différents d'un Joker seul
+
+## Qu'est ce qu'un Type imbriqué ?
+Un Type déclaré à l'intérieur d'un autre type
+
+## Qu'est ce qu'un Type Englobant ?
+Un Type contenant la déclaration d'un autre type
+
+## Qu'est ce qu'un Type Membre Statique ?
+Un Type imbriqué, déclaré ```static``` au même niveau que les membres de son type englobant
+
+## Qu'est ce qu'une Classe interne ? 
+Une classe imbriqué non Statique
+
+## Quels sont les trois types de classes internes ?
+* Classe membre non statique (Déclarée dans le corps d'une classe en dehors de toute méthode)
+* Classe locale (Déclaré dans un bloc de code)
+* Classe anonyme (dont le corps est définie lors d'un ```new Type() {/*définition*/}```)
+
+## Qu'est ce qu'une Classe anonyme ?
+Une Classe locale sans nom, dotée d'un unique constructeur implicite, instanciée en même temps qu'elle est définie
