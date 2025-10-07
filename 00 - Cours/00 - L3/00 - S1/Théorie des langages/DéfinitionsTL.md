@@ -144,3 +144,45 @@ Un automate $M = (\Sigma, Q, I, F, \delta)$ est déterministe *ssi*
 ## Qu'est ce qu'un État puits ?
 Un état r non terminal tel que :  $\forall a \in \Sigma \delta(r, a) = r$
 
+## Qu'est ce qu'un Langage Rationnel ?
+Un langage qui vérifie les deux conditions suivantes : 
+* Il contient $\emptyset$ et $\{a\} \forall a \in \Sigma$
+* Il doit être fermé pour les opérations Union, Concaténation et Étoile 
+
+## Qu'est ce qu'une Expression Rationnelle ?
+Ce sont des Expressions construites sur $\Sigma \cup \{\emptyset, \varepsilon\}$ avec les opérateurs $+\ ,\ .\ ,\ *$
+
+## Qu'est ce que l'application L (expression rationnelle) ?
+C'est une application qui fait correspondre à une ER sur $\Sigma$ le langage rationnel qu'elle représente. Elle est calculée récursivement comme suit :
+* $L(\emptyset) = \emptyset$
+* $L(\varepsilon) = \{\varepsilon\}$
+* $L(a) = \{a\} \forall a \in \Sigma$
+* $L(F + G) = L(F) \cup L(G)$
+* $L(F . G) = L(F) . L(G)$
+* $L(F*) = (L(F))*$
+
+## Qu'est ce que la Largeur alphabétiques d'une expression rationnelle ?
+Le nombre de lettre de l'alphabet dans cette epression (notée $|E|$)
+
+## Quels sont les 5 Ensembles définit lors de l'algorithme de Gulshkov ?
+* $Pos(E)$ : Ensembles des Positions
+* $First(E)$ : Ensembles des indices des lettres qui commencent un mot quelconque
+* $Last(E)$ : Ensembles des indices des lettres qui terminent un mot quelconque
+* $Null(E)$ : Ensemble indiquant l'existence d'$\varepsilon$ dans $L(\overline{E})$ ($\emptyset$ si non existant , $\{\varepsilon\}$ si existant)
+* $Follow(E, X)$ : Ensemble des positions qui suivent directement la position X
+
+## Comment est calculé la Fonction $Null(E)$ ?
+* $Null(\emptyset) = \emptyset$
+* $Null(\varepsilon) = \{\varepsilon\}$
+* $Null(a) = \emptyset$
+* $Null(E + F) = Null(E) \cup Null(F)$
+* $Null(E . f) = Null(E) \cap Null(F)$
+* $Null(E*) = \{\varepsilon\}$
+
+## Comment est calculé la fonction $First(E)$ ?
+* $First(\emptyset) = \emptyset$
+* $First(\varepsilon) = \emptyset$
+* $First(a) = \{x\}\ si\ \overline{a} = \alpha_x$
+* $First(F + G) = First(F) \cup First(G)$
+* $First(F . G)=First(F) \cup (Null(F) . First(G))$
+* $First(F*) = First(F)$

@@ -424,3 +424,14 @@ Une classe imbriqué non Statique
 
 ## Qu'est ce qu'une Classe anonyme ?
 Une Classe locale sans nom, dotée d'un unique constructeur implicite, instanciée en même temps qu'elle est définie
+
+## Qu'est ce qu'une Méthode Générique ?
+Une Famille de méthodes, basées sur une unique définition de méthodes, paramétrée par une ou plusieurs variables de types
+```[Access] [Modif] <DT_1 , ... , DT_n> Type Signature [Corps] (avec DT_i des types qui en étends d'autres```
+
+## Qu'est ce que l'Inférence de type ? 
+Le compilateur sait calculer (=inférer) les paramètres de types effectifs lors d'un appel de méthode générique
+
+## Qu'est ce que la Capture du Joker ?
+Lors d'un appel de Méthode Générique < T > m (G < T > X) avec un argument X de type H < ? > , le compilateur remplace ? par un nom de type inexistant qu'il peut alors substituer à T
+
