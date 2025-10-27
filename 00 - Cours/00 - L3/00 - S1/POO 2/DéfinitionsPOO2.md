@@ -435,3 +435,56 @@ Le compilateur sait calculer (=inférer) les paramètres de types effectifs lors
 ## Qu'est ce que la Capture du Joker ?
 Lors d'un appel de Méthode Générique < T > m (G < T > X) avec un argument X de type H < ? > , le compilateur remplace ? par un nom de type inexistant qu'il peut alors substituer à T
 
+## Qu'est ce que la Règle de Compilation ?
+```TS(e.getClass()) = Class <? extends |TS(e)|>```
+
+## Qu'est ce qu'un Type Réifiable ?
+Un Type qui ne perd pas d'information durant la phase d'effacement
+
+## Qu'est ce qu'un Type Tableau Instanciable ?
+Un Type tableau est instanciable ===ssi=== le type de ses éléments de base est un type réifiable
+
+## Comment se fait la gestion des threads ?
+Par Concurrence
+
+## Quelles sont les 3 étapes de la Programmation événementielle ?
+1. Définition des écouteurs
+2. Mise en place des écouteurs
+3. Exécution
+
+## Qu'est ce qu'un composant graphique majeurs ?
+Un composant en interaction avec le contrôleur
+
+## Quelles sont les 7 étapes de l'organisation du code lors de la programmation événementielle ?
+1. Déclaration du modèle et des composants graphique majeurs
+2. Création du modèle, de la vue, du controleur (avec des méthodes outils si nécessaires)
+3. Construire l'arborescence des composants graphiques de la vue
+4. Construire les controleurs et les connecter avec la vue et le modèle
+5. Initialiser l'application
+6. Factoriser *judicieusement* le code des controleurs
+7. Lancer l'application avec la "formule magique"
+	```
+	SwingUtilities.invokeLater(new Runnable() {
+		public void run() {
+			new ColoredAppli().display();
+		}
+	});
+	```
+
+## Qu'est ce que la Hiérarchie de contenance ?
+Une Arborescence des composants graphique disposés sur un conteneur
+
+## Qu'est ce qu'un Composant graphique Affichable ?
+Un composant dont la hiérarchie de contenance est enracinée dans une fenêtre Swing affichable
+Détectable avec ```isDisplayable()```
+
+## Qu'est ce qu'un Composant graphique Visible ?
+Un Composant dont la propriété de visibilité est vraie
+Détectable avec ```isVisible()```
+
+## Qu'est ce qu'un composant graphique affiché à l'écran ?
+Un Composant affichable et visible, dont chaque élément de la hiérarchie de contenance est visible
+Détectable avec isShowing()
+
+## Qu'est ce qu'un Gestionnaire de Répartition ?
+Un Objet non graphique qui gère intégralement la taille et la place des composants graphiques disposés dans un conteneur
